@@ -1,0 +1,165 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+/* Style pada form */
+header {
+  font-size: 1.5em;
+}
+
+header,
+form {
+  display: flex;
+  min-height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: white;
+  outline-style: none;
+}
+
+form button {
+  color: #fbd786;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #f7797d;
+  color: white;
+}
+
+/* Style pada todo list */
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  min-width: 20%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background-color: white;
+  font-size: 1.2rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #f7797d;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.trash-btn:hover {
+  background-color: #fbd786;
+}
+
+.complete-btn {
+  background-color: yellowgreen;
+}
+
+.complete-btn:hover {
+  background-color: rgb(83, 235, 83);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  opacity: 0;
+  transform: translate(20px, 20px);
+  transition: all 0.5s;
+}
+
+/* Style pada filter */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #f7797d;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select:after {
+  content: "\25BC";
+  position: absolute;
+  background: #f7797d;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.select:hover:after {
+  background: white;
+  color: #f7797d;
+}
+
+@media (max-width: 800px) {
+  form input,
+  form button {
+    padding: 0.3rem;
+    font-size: 1rem;
+  }
+
+  select {
+    width: 7rem;
+    padding: 0.3rem;
+    font-size: 11px;
+  }
+
+  .select:after {
+    padding: 0.3rem;
+  }
+}
